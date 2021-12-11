@@ -1,3 +1,45 @@
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url("../fonts/Roboto-Regular.woff") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url("../fonts/Roboto-Medium.woff") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoCondensed-Bold';
+  src: url("../fonts/RobotoCondensed-Bold.woff") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoCondensed-Regular';
+  src: url("../fonts/RobotoCondensed-Regular.woff") format("woff2"), url("../fonts/RobotoCondensed-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dosis-Medium';
+  src: url("../fonts/Dosis-Medium.woff") format("woff2"), url("../fonts/Dosis-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dosis-Light';
+  src: url("../fonts/Dosis-Light.woff") format("woff2"), url("../fonts/Dosis-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -10,13 +52,58 @@ html {
           box-sizing: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 body {
+  font-family: 'Roboto-Regular', 'Arial', 'sans-serif';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
   min-width: 320px;
   overflow-x: hidden;
 }
 
 .container {
   padding: 0 20px;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1320px;
+  }
 }
 
 .header {
@@ -36,8 +123,26 @@ body {
           align-items: center;
 }
 
+@media (min-width: 640px) {
+  .header__inner {
+    min-height: 100px;
+  }
+}
+
 .logo__link {
   margin-left: 8px;
+}
+
+@media (min-width: 640px) {
+  .logo__link {
+    margin-left: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo__link {
+    margin-left: 0px;
+  }
 }
 
 .menu__btn {
@@ -46,5 +151,96 @@ body {
   border-radius: 3px;
   background-color: #fff;
   border: none;
+  position: relative;
+}
+
+.menu__btn::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #2B4074;
+  top: 15px;
+  left: 14px;
+  -webkit-box-shadow: 0 4px 0 0 #2B4074, 0 8px 0 0 #2B4074;
+          box-shadow: 0 4px 0 0 #2B4074, 0 8px 0 0 #2B4074;
+}
+
+@media (min-width: 1440px) {
+  .menu__btn {
+    margin-right: 90px;
+  }
+}
+
+.head {
+  background-image: url(../images/bg-slider.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 193px;
+}
+
+.top-slider {
+  background: rgba(33, 33, 33, 0.5);
+}
+
+.top-slider__item {
+  color: #fff;
+  text-align: center;
+  min-height: 193px;
+}
+
+.top-slider__title {
+  font-family: 'RobotoCondensed-Regular';
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 36px 0 28px;
+  max-width: 243px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.top-slider__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8px;
+  width: 61px;
+  background-color: #4A4A4A;
+  margin: 0 auto;
+}
+
+.top-slider .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+.top-slider .slick-dots .slick-active button {
+  background-color: transparent;
+  border: 1px solid #476E4D;
+}
+
+.top-slider .slick-dots button {
+  font-size: 0;
+  border: none;
+  padding: 0;
+  background-color: #2B4074;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 10px;
 }
 /*# sourceMappingURL=style.css.map */
