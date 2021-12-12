@@ -27,6 +27,14 @@ li {
    list-style: none;
 }
 
+button {
+   padding: 0;
+}
+
+p {
+   margin: 0;
+}
+
 body {
    font-family: 'Roboto-Regular', 'Arial', 'sans-serif';
    font-weight: 400;
@@ -116,6 +124,10 @@ body {
    background-position: center center;
    background-size: cover;
    min-height: 193px;
+
+   @media (min-width: 640px) {
+      min-height: 386px;
+   }
 }
 
 .top-slider {
@@ -125,6 +137,14 @@ body {
       color: #fff;
       text-align: center;
       min-height: 193px;
+
+      @media (min-width: 640px) {
+         min-height: 386px;
+      }
+
+      @media (min-width: 768px) {
+         min-height: 465px;
+      }
    }
 
    &__title {
@@ -138,6 +158,19 @@ body {
       margin: 0 auto;
       position: relative;
 
+      @media (min-width: 640px) {
+         font-size: 60px;
+         line-height: 60px;
+         padding: 50px 0 15px;
+         margin: 0 auto 30px;
+         max-width: 522px;
+      }
+
+      @media (min-width: 768px) {
+         padding: 87px 0 0;
+         margin: 0 auto 0px;
+      }
+
       &::after {
          content: "";
          position: absolute;
@@ -148,8 +181,44 @@ body {
          width: 61px;
          background-color: $text-color;
          margin: 0 auto;
+
+         @media (min-width: 768px) {
+            display: none;
+         }
       }
    }
+
+   &__text {
+      display: none;
+
+      @media (min-width: 768px) {
+         display: block;
+         padding: 25px 0 32px;
+         font-family: 'RobotoCondensed-Regular';
+         font-size: 18px;
+         line-height: 20px;
+         font-weight: 400;
+         max-width: 587px;
+         margin: 0 auto;
+      }
+   }
+
+   &__btn {
+      display: none;
+
+      @media (min-width: 640px) {
+         // font-weight: 500;
+         display: block;
+         margin: 0 auto 13px;
+         font-size: 18px;
+         color: $bg-color;
+         background-color: $accent;
+         padding: 16px 45px;
+         border-radius: 3px;
+         border: none;
+      }
+   }
+
 
    .slick-dots {
       display: flex;
@@ -158,6 +227,10 @@ body {
       bottom: 20px;
       left: 0;
       right: 0;
+
+      @media (min-width: 640px) {
+         bottom: 50px;
+      }
 
       .slick-active {
          button {
@@ -176,6 +249,25 @@ body {
          border-radius: 50%;
          margin: 0 10px;
       }
+   }
+
+   .slick-arrow {
+      width: 56px;
+      height: 56px;
+      border: none;
+      position: absolute;
+      right: 0;
+      z-index: 5;
+   }
+
+   .slick-prev {
+      background-color: $accent;
+      top: calc(50% - 56px);
+   }
+
+   .slick-next {
+      background-color: $bg-color;
+      bottom: calc(50% - 56px);
    }
 }
 
