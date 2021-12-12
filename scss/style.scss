@@ -145,6 +145,14 @@ body {
       @media (min-width: 768px) {
          min-height: 465px;
       }
+
+      @media (min-width: 1024px) {
+         min-height: 618px;
+      }
+
+      @media (min-width: 1440px) {
+         min-height: 668px;
+      }
    }
 
    &__title {
@@ -169,6 +177,22 @@ body {
       @media (min-width: 768px) {
          padding: 87px 0 0;
          margin: 0 auto 0px;
+      }
+
+      @media (min-width: 1024px) {
+         padding-top: 101px;
+         font-size: 84px;
+         line-height: 84px;
+         letter-spacing: 2px;
+         max-width: 750px;
+      }
+
+      @media (min-width: 1440px) {
+         padding-top: 107px;
+         font-size: 97px;
+         line-height: 96px;
+         letter-spacing: 2px;
+         max-width: 865px;
       }
 
       &::after {
@@ -201,6 +225,12 @@ body {
          max-width: 587px;
          margin: 0 auto;
       }
+
+      @media (min-width: 1440px) {
+         font-size: 24px;
+         line-height: 26px;
+         max-width: 886px;
+      }
    }
 
    &__btn {
@@ -230,6 +260,10 @@ body {
 
       @media (min-width: 640px) {
          bottom: 50px;
+      }
+
+      @media (min-width: 1024px) {
+         bottom: 80px;
       }
 
       .slick-active {
