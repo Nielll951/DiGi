@@ -1,8 +1,9 @@
 @import 'vars';
 @import 'fonts';
+@import 'global';
 
 html {
-   box-sizing: border-box;
+   box-sizing: border-box; 
 }
 
 *,
@@ -397,6 +398,51 @@ body {
       bottom: calc(50% - 70px);
    }
 }
+.services {
+   padding: 25px 0 40px;
+   text-align: center;
+
+   &__inner {
+   }
+
+   &__head {
+   }
+
+   &__title {
+   }
+
+   &__descr {
+   }
+
+   &__text {
+   }
+
+   &__items {
+   }
+
+   &__item {
+   }
+
+   &__item-inner {
+   }
+
+   &__item-img {
+   }
+
+   &__item-title {
+   }
+
+   &__item-text {
+   }
+
+   &__item-link {
+   }
+}
+.container {
+}
+.title {
+}
+
 
 
 

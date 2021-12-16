@@ -1,0 +1,71 @@
+@import 'vars';
+@import 'fonts';
+
+html {
+  box-sizing: border-box; 
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: 'Roboto-Regular', 'Arial', 'sans-serif';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 0 20px;
+
+  @media (min-width: 640px) {
+     padding: 0 30px;
+  }
+
+  @media (min-width: 768px) {
+     padding: 0 40px;
+  }
+
+  @media (min-width: 1024px) {
+     max-width: 1200px;
+     margin: 0 auto;
+  }
+
+  @media (min-width: 1440px) {
+     max-width: 1320px;
+  }
+}
