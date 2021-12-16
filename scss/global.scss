@@ -47,6 +47,7 @@ body {
   line-height: 18px;
   min-width: 320px;
   overflow-x: hidden;
+  color: $default-color;
 }
 
 .container {
@@ -67,5 +68,23 @@ body {
 
   @media (min-width: 1440px) {
      max-width: 1320px;
+  }
+}
+.title {
+  font-size: 24px;
+  line-height: 28px;
+  @extend %robotocondensed-400;
+  position: relative;
+  padding-bottom: 28px;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 8px;
+    bottom: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background-color: $accent;
   }
 }
