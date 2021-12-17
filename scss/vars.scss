@@ -5,7 +5,17 @@ $default-color: #9B9B9B;
 
 %dosis-300 {
    font-family: 'Dosis-Light';
-   font-style: normal;
+   font-weight: 300;
+}
+
+%dosis-500 {
+   font-family: 'Dosis-Medium';
+   font-weight: 500;
+}
+
+%roboto-500 {
+   font-family: 'Roboto-Medium';
+   font-weight: 500;
 }
 
 %robotocondensed-400 {
@@ -13,7 +23,8 @@ $default-color: #9B9B9B;
    font-weight: 400;
 }
 
-%roboto-500 {
-   font-family: 'Roboto-Medium';
-   font-weight: 500;
+%robotocondensed-700 {
+   font-family: 'RobotoCondensed-Bold';
+   font-weight: 700;
 }
+
