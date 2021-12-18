@@ -338,10 +338,6 @@
    padding: 25px 0 40px;
    text-align: center;
 
-   &__inner {}
-
-   &__head {}
-
    &__title {
       margin-bottom: 47px;
       color: $accent;
@@ -378,7 +374,9 @@
 
          .services__item-text,
          .services__item-link {
-            display: block;
+            opacity: 1;
+            height: auto;
+            overflow: visible;
          }
 
          .services__item-img {
@@ -398,6 +396,10 @@
       }
    }
 
+   &__item-inner {
+      transition: all .5s;
+   }
+
    &__item-img {
       margin-bottom: 30px;
    }
@@ -410,14 +412,20 @@
       @extend %robotocondensed-700;
    }
 
+   &__item-text,
+   &__item-link {
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      transition: all .5s;
+   }
+
    &__item-text {
-      display: none;
       margin-bottom: 17px;
       @extend %dosis-500;
    }
 
    &__item-link {
-      display: none;
       letter-spacing: 2px;
       color: $accent;
       @extend %robotocondensed-700;
@@ -570,7 +578,54 @@
                min-height: 255px;
             }
          }
+      }
+   }
+}
 
+@media (min-width: 1440px) {
+   .services {
+      padding: 0;
+
+      &__inner {
+         display: flex;
+         justify-content: space-between;
+         margin: 0 -100px 0 -50px;
+      }
+
+      &__head {
+         min-width: 350px;
+         max-width: 350px;
+         margin-right: 100px;
+      }
+
+      &__title {
+         margin: 90px 0 70px;
+         text-align: left;
+      }
+
+      &__descr {
+         padding-bottom: 38px;
+         margin-bottom: 35px;
+      }
+
+      &__items {
+         margin: 0;
+      }
+
+      &__item {
+         width: 25%;
+         height: 273px;
+         padding: 0 5px;
+
+         &:hover {
+            padding: 0 5px;
+
+            .services__item-inner {
+               margin: 5px 0;
+               padding: 10px 3px 5px;
+               min-height: 255px;
+            }
+         }
       }
    }
 }
