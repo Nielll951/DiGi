@@ -144,4 +144,11 @@ body {
   right: 0;
   background-color: #2B4074;
 }
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
 /*# sourceMappingURL=global.css.map */
